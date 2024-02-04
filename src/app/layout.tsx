@@ -1,9 +1,9 @@
 import Providers from '@/providers'
-import { MantineProvider, ColorSchemeScript } from '@mantine/core'
+import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import type { Metadata } from 'next'
 
-import '@mantine/core/styles.css'
 import '@mantine/charts/styles.css'
+import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
 import './globals.css'
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: any) {
 			<head>
 				<ColorSchemeScript />
 			</head>
-			<body className="w-screen select-none overflow-x-hidden scroll-smooth">
+			<body className="scroll-smooths select-none overflow-x-hidden">
 				<MantineProvider>
 					<Providers>{children}</Providers>
 				</MantineProvider>

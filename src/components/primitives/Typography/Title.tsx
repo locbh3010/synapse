@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import { ReactNode, forwardRef } from 'react'
+import { FC, ReactNode, forwardRef } from 'react'
 import cn from 'classnames'
 
 const titleClasses = cva('font-bold', {
@@ -23,7 +23,7 @@ interface ITitleProps {
 	[key: string]: any
 }
 
-const Title = forwardRef<HTMLHeadingElement, ITitleProps>(
+const Title: FC<ITitleProps> = forwardRef<HTMLHeadingElement, ITitleProps>(
 	({ as: Tag = 'h5', children, className, level = 5, ...rest }, ref) => {
 		return (
 			<Tag

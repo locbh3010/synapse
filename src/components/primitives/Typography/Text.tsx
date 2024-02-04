@@ -1,8 +1,8 @@
 import { cva } from 'class-variance-authority'
-import { ReactNode, forwardRef } from 'react'
+import { FC, ReactNode, forwardRef } from 'react'
 import cn from 'classnames'
 
-const textClasses = cva('font-normal', {
+const textClasses = cva('font-inherit', {
 	variants: {
 		size: {
 			xxs: 'text-[10px] leading-[1.2]',
@@ -22,7 +22,7 @@ interface ITextProps {
 	[key: string]: any
 }
 
-const Text = forwardRef<HTMLParagraphElement, ITextProps>(
+const Text: FC<ITextProps> = forwardRef<HTMLParagraphElement, ITextProps>(
 	({ size = 'md', children, className, ...rest }, ref) => {
 		return (
 			<p {...rest} ref={ref} className={cn(textClasses({ size, className }))}>
