@@ -1,11 +1,10 @@
-import Providers from '@/providers'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import type { Metadata } from 'next'
 
+import './globals.css'
 import '@mantine/charts/styles.css'
 import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
-import './globals.css'
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -16,12 +15,10 @@ export default function RootLayout({ children }: any) {
 	return (
 		<html lang="en">
 			<head>
-				<ColorSchemeScript />
+				<ColorSchemeScript defaultColorScheme="dark" />
 			</head>
-			<body className="scroll-smooths select-none overflow-x-hidden">
-				<MantineProvider>
-					<Providers>{children}</Providers>
-				</MantineProvider>
+			<body>
+				<MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
 			</body>
 		</html>
 	)
