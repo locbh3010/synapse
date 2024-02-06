@@ -1,0 +1,24 @@
+.badgeRoot {
+	display: flex;
+	width: max-content;
+	align-items: center;
+	gap: 4px;
+	padding: 5px 10px;
+	border-radius: var(--rounded-full);
+	font-size: var(--mantine-font-size-xs);
+	font-weight: var(--font-weight-bold);
+	text-transform: capitalize;
+	background: var(--mantine-color-white);
+	line-height: 16px;
+}
+
+.badgeDot {
+	--badge-color: var(--mantine-color-blue-6);
+
+	display: flex;
+	width: 10px;
+	height: 10px;
+	border-radius: 100rem;
+
+	background: var(--badge-color);
+}

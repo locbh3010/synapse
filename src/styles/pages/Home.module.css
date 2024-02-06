@@ -1,0 +1,65 @@
+.hero {
+	background: var(--bg-header);
+}
+
+.heroContent {
+	padding-top: 6rem;
+	padding-bottom: 8rem;
+}
+
+.heroContentTitle {
+	--mantine-h1-font-size: 3.75rem;
+	--mantine-h1-font-weight: var(--font-weight-semibold);
+
+	color: var(--mantine-color-white);
+	line-height: var(--_text-line-height);
+	margin-bottom: var(--mantine-spacing-xl);
+}
+
+.heroContentDescription {
+	--mantine-font-size-md: 22px;
+	--mantine-line-height-md: 1.625;
+
+	max-width: rem(800px);
+	font-weight: var(--font-weight-medium);
+}
+
+.heroContentSearch {
+	position: relative;
+	max-width: 28rem;
+	margin-top: 2.25rem;
+}
+
+.heroContentSearchInput {
+	--padding-block: 17px;
+
+	outline: none;
+	border: none;
+	width: 100%;
+	font-size: var(--mantine-font-size-lg);
+	padding-right: 0.5rem;
+	padding-left: 1.75rem;
+	padding-top: var(--padding-block);
+	padding-bottom: var(--padding-block);
+	border-radius: var(--rounded-full);
+	color: var(--mantine-color-white);
+	background: hsla(0, 0%, 100%, 0.06);
+	line-height: 1.5rem;
+}
+
+.heroContentSearchAction {
+	--button-offset: 7px;
+
+	position: absolute;
+	border-radius: var(--rounded-full);
+	top: var(--button-offset);
+	right: var(--button-offset);
+	height: calc((100% - var(--button-offset) * 2) + 2px);
+	padding: 0 22px;
+	font-weight: var(--font-weight-semibold);
+}
+
+.heroSlide {
+	padding-top: 24px;
+	padding-bottom: calc(480px - 320px);
+}

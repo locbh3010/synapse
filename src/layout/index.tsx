@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { AppShell, AppShellMain } from '@mantine/core'
+import { AppShell, AppShellFooter, AppShellMain } from '@mantine/core'
 import { ReactNode } from 'react'
 
 interface ILayoutProps {
@@ -16,8 +16,17 @@ export default function Layout({ children }: ILayoutProps) {
 			withBorder={false}
 		>
 			<Header />
-			<AppShellMain>{children}</AppShellMain>
-			<Footer />
+			<AppShellMain
+				style={{
+					width: '100%',
+					overflowX: 'hidden'
+				}}
+			>
+				{children}
+			</AppShellMain>
+			<AppShellFooter pos="static">
+				<Footer />
+			</AppShellFooter>
 		</AppShell>
 	)
 }
