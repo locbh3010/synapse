@@ -19,7 +19,8 @@ export default function Layout({ children }: ILayoutProps) {
 			<AppShellMain
 				style={{
 					width: '100%',
-					overflowX: 'hidden'
+					overflowX: 'hidden',
+					paddingTop: 0
 				}}
 			>
 				{children}

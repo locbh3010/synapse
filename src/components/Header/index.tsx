@@ -16,7 +16,7 @@ import SearchModal from './SearchModal'
 
 export default function Header() {
 	return (
-		<AppShellHeader bg="var(--bg-header)">
+		<AppShellHeader pos="static" bg="var(--bg-header)">
 			<Container size="normal" px="xl" h="100%">
 				<Group justify="space-between" align="center" h="inherit">
 					<Image h={rem(40)} src={lightLogo} alt="Logo" component={NextImage} />
