@@ -61,9 +61,9 @@ function Card({ image, title, badge, author }: CardProps) {
 							style={{
 								borderRadius: rem(6),
 								display: 'inline',
-								lineHeight: '2.3',
-								'-webkit-box-decoration-break': 'clone'
+								lineHeight: '2.3'
 							}}
+							className="decoration-clone"
 						>
 							{title}
 						</Text>
