@@ -1,7 +1,6 @@
 import Badge from '@/components/Badge'
 import HomeHeroSlide from '@/components/Hero/HomeHeroSlide'
 import {
-	ActionIcon,
 	AspectRatio,
 	Avatar,
 	Box,
@@ -17,14 +16,13 @@ import {
 	rem
 } from '@mantine/core'
 import styles from '@styles/pages/Home.module.css'
-import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import { times } from 'lodash'
 
 export default function Home() {
 	return (
 		<>
 			<Box component="section" className={styles.hero}>
-				<Container px="xl" size="normal">
+				<Container>
 					<div className={styles.heroContent}>
 						<Title order={1} className={styles.heroContentTitle}>
 							Welcome to Synapse!
@@ -45,21 +43,13 @@ export default function Home() {
 						</div>
 					</div>
 				</Container>
-				<Container size="normal" px="xl">
+				<Container>
 					<Divider color="dark.4" />
 					<Box className={styles.heroSlide}>
 						<Group justify="space-between" align="center" mb={rem(24)}>
 							<Title order={4} fw={600} c="white">
 								Featured Posts
 							</Title>
-							<Group gap="sm">
-								<ActionIcon variant="subtle" color="white">
-									<IconArrowLeft size="24px" />
-								</ActionIcon>
-								<ActionIcon variant="subtle" color="white">
-									<IconArrowRight size="24px" />
-								</ActionIcon>
-							</Group>
 						</Group>
 						<Box mb={rem(-160 * 2)}>
 							<HomeHeroSlide />
@@ -69,7 +59,7 @@ export default function Home() {
 			</Box>
 			<Box pb={rem(480 - 320)} />
 			<Box component="section" my={rem(80)}>
-				<Container size="normal" px="xl">
+				<Container>
 					<Divider mb="lg" color="gray.2" />
 					<Title order={4} fw={600} mb="lg">
 						Latest Posts
@@ -140,7 +130,7 @@ export default function Home() {
 				</Container>
 			</Box>
 			<Box pt="lg" mb={rem(80)}>
-				<Container size="normal" px="xl">
+				<Container>
 					<Divider mb="lg" color="gray.2" />
 					<Title order={4} fw={600} mb="lg">
 						Popular Tags

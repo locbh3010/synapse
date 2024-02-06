@@ -185,8 +185,8 @@ export default function HomeHeroSlide() {
 			slideSize={100 / 3 + '%'}
 			slideGap={rem(28)}
 			align="start"
-			withControls={false}
 			slidesToScroll={3}
+			withControls={false}
 			styles={{
 				viewport: {
 					overflow: 'visible'

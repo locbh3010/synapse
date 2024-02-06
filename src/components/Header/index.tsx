@@ -13,13 +13,21 @@ import { map } from 'lodash'
 import NextImage from 'next/image'
 import Link from 'next/link'
 import SearchModal from './SearchModal'
+import { ROUTES } from '@/utils/routes'
 
 export default function Header() {
 	return (
 		<AppShellHeader pos="static" bg="var(--bg-header)">
 			<Container size="normal" px="xl" h="100%">
 				<Group justify="space-between" align="center" h="inherit">
-					<Image h={rem(40)} src={lightLogo} alt="Logo" component={NextImage} />
+					<Link title="Home page" href={ROUTES.HOME}>
+						<Image
+							h={rem(40)}
+							src={lightLogo}
+							alt="Logo"
+							component={NextImage}
+						/>
+					</Link>
 					<Group gap={rem(28)} align="center" component="nav">
 						{map(MENU_LIST, (item) => (
 							<Anchor
@@ -31,7 +39,7 @@ export default function Header() {
 								fw={600}
 								key={item.label}
 								title={item.label}
-								href={item.label}
+								href={item.path}
 							>
 								{item.label}
 							</Anchor>
