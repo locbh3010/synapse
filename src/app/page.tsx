@@ -1,6 +1,7 @@
 import Badge from '@/components/Badge'
 import HomeHeroSlide from '@/components/Hero/HomeHeroSlide'
 import {
+	Anchor,
 	AspectRatio,
 	Avatar,
 	Box,
@@ -95,15 +96,10 @@ export default function Home() {
 									</Box>
 								</Box>
 								<Box mt="md">
-									<Title
-										fw={600}
-										order={5}
-										fz="lg"
-										mb="sm"
-										lineClamp={2}
-										lh="1.75rem"
-									>
-										The Rise of Smart Homes: Transforming the Way We Live
+									<Title order={5} mb="sm" lineClamp={2}>
+										<Anchor lh="1.75rem" fz="xl" fw={600} c="dark">
+											The Rise of Smart Homes: Transforming the Way We Live
+										</Anchor>
 									</Title>
 									<Text lineClamp={3} c="dimmed" lh="1.625" fz="md" mb="sm">
 										Duo Reges, constructio interrete. Mene ergo et Triarium
