@@ -1,10 +1,8 @@
+import Layout from '@/layout'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import type { Metadata } from 'next'
 
-import './globals.css'
-import '@mantine/charts/styles.css'
-import '@mantine/core/styles.css'
-import '@mantine/dates/styles.css'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -15,10 +13,33 @@ export default function RootLayout({ children }: any) {
 	return (
 		<html lang="en">
 			<head>
-				<ColorSchemeScript defaultColorScheme="dark" />
+				<ColorSchemeScript defaultColorScheme="light" />
 			</head>
 			<body>
-				<MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
+				<MantineProvider
+					defaultColorScheme="light"
+					theme={{
+						colors: {
+							pink: [
+								'#ffe7f5',
+								'#ffcee3',
+								'#ff9bc3',
+								'#ff63a2',
+								'#ff3686',
+								'#ff1874',
+								'#ff016b',
+								'#e5005a',
+								'#cc004f',
+								'#b40044'
+							]
+						},
+						primaryColor: 'pink',
+						primaryShade: 5,
+						fontFamily: 'Mulish, sans-serif'
+					}}
+				>
+					<Layout>{children}</Layout>
+				</MantineProvider>
 			</body>
 		</html>
 	)

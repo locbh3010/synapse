@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900;1000&display=swap');
+
+@import '@mantine/charts/styles.css';
+@import '@mantine/core/styles.css';
+@import '@mantine/dates/styles.css';
+@import '@mantine/spotlight/styles.css';
+
+:root {
+	--bg-header: #151a25;
+	--container-width: rem(1320px);
+	--container-size-normal: var(--container-width);
+}
+
+body {
+	user-select: none;
+}
